@@ -2,7 +2,9 @@ package com.thundertestdetect.converter;
 
 import com.thundertestdetect.dto.ThunderTestResultDTO;
 import com.thundertestdetect.entity.ThunderTestResultEntity;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ThunderTestResultConverter {
     public ThunderTestResultEntity toEntity(ThunderTestResultDTO dto) {
         ThunderTestResultEntity entity = new ThunderTestResultEntity();

@@ -1,7 +1,8 @@
 package com.thundertestdetect.service.base;
 
 import com.thundertestdetect.dto.RawDataDTO;
+import com.thundertestdetect.dto.ThunderTestResultDTO;
 
 public interface IThunerTestResultService {
-    void callApi(String request_id, RawDataDTO raw_data);
+    ThunderTestResultDTO callApi(String request_id, RawDataDTO raw_data);
 }

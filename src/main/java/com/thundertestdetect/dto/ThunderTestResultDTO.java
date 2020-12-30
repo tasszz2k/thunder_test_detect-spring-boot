@@ -1,13 +1,11 @@
 package com.thundertestdetect.dto;
 
-import javax.persistence.Column;
-import javax.persistence.Id;
 import java.util.Date;
 
 public class ThunderTestResultDTO {
 
     private String requestId;
-    private int time;
+    private Long time;
     private int code;
     private String response;
     private String raw;
@@ -22,11 +20,11 @@ public class ThunderTestResultDTO {
         this.requestId = requestId;
     }
 
-    public int getTime() {
+    public Long getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(Long time) {
         this.time = time;
     }
 

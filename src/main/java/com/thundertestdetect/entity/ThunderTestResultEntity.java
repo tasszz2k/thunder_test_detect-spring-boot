@@ -2,19 +2,22 @@ package com.thundertestdetect.entity;
 
 import org.springframework.data.annotation.CreatedDate;
 import javax.persistence.Id;
+
+import org.springframework.data.annotation.LastModifiedDate;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@EntityListeners(AuditingEntityListener.class)
 @Table(name = "thunder_test_result")
 public class ThunderTestResultEntity {
     @Id
     private String requestId;
 
     @Column
-    private int time;
+    private Long time;
 
     @Column
     private int code;
@@ -30,7 +33,7 @@ public class ThunderTestResultEntity {
     private String request;
 
     @Column
-    @CreatedDate
+    @LastModifiedDate
     private Date created;
 
     public String getRequestId() {
@@ -41,11 +44,11 @@ public class ThunderTestResultEntity {
         this.requestId = requestId;
     }
 
-    public int getTime() {
+    public Long getTime() {
         return time;
     }
 
-    public void setTime(int time) {
+    public void setTime(Long time) {
         this.time = time;
     }
 
