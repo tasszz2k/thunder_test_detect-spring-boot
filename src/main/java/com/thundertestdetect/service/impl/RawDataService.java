@@ -24,11 +24,15 @@ public class RawDataService implements IRawDataService {
     }
 
     @Override
-    public String getRequest(RawDataDTO rawData) {
-        String url = "https://address-sorting.ghtk.vn/cart-predict";
-        return String.format(url + "?address=%s&hamlet=%s&street=%s&ward=%s&district=%s&province=%s&cart_type=%d",
-                rawData.getAddress(), rawData.getHamlet(),rawData.getStreet(),
-                rawData.getWard(),rawData.getDistrict(), rawData.getProvince(),
-                rawData.getCart_type());
+    public String getRequest(RawDataDTO rawData, String requestId) {
+//        //---- Real Server API
+//        String url = "https://address-sorting.ghtk.vn/cart-predict";
+
+        //---- Server Tests
+        String url = "https://address-sorting-dev.ghtklab.com/cart-predict";
+        return String.format(url + "?address=%s&hamlet=%s&street=%s&ward=%s&district=%s&province=%s&cart_type=%d&request_id=%s",
+                rawData.getAddress(), rawData.getHamlet(), rawData.getStreet(),
+                rawData.getWard(), rawData.getDistrict(), rawData.getProvince(),
+                rawData.getCart_type(), requestId);
     }
 }

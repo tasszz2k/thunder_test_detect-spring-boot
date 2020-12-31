@@ -73,5 +73,4 @@ public class RawDataDTO {
     public void setCart_type(int cart_type) {
         this.cart_type = cart_type;
     }
-
 }

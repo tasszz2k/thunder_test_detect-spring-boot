@@ -1,6 +1,5 @@
 package com.thundertestdetect.entity;
 
-import org.springframework.data.annotation.CreatedDate;
 import javax.persistence.Id;
 
 import org.springframework.data.annotation.LastModifiedDate;
@@ -17,7 +16,7 @@ public class ThunderTestResultEntity {
     private String requestId;
 
     @Column
-    private Long time;
+    private Long totalDuration;
 
     @Column
     private int code;
@@ -36,6 +35,33 @@ public class ThunderTestResultEntity {
     @LastModifiedDate
     private Date created;
 
+    @Column
+    private Date sendTime;
+
+    @Column
+    private Date receiveTime;
+
+    @Column
+    private Date responseTime;
+
+    @Column
+    private Date responseReceiveTime;
+
+    @Column
+    private Double normTime;
+
+    @Column
+    private Double elasticTime;
+
+    @Column
+    private Double rescoreTime;
+
+    @Column
+    private Double redisTime;
+
+    @Column
+    private Double duration;
+
     public String getRequestId() {
         return requestId;
     }
@@ -44,12 +70,12 @@ public class ThunderTestResultEntity {
         this.requestId = requestId;
     }
 
-    public Long getTime() {
-        return time;
+    public Long getTotalDuration() {
+        return totalDuration;
     }
 
-    public void setTime(Long time) {
-        this.time = time;
+    public void setTotalDuration(Long totalDuration) {
+        this.totalDuration = totalDuration;
     }
 
     public int getCode() {
@@ -92,5 +118,75 @@ public class ThunderTestResultEntity {
         this.created = created;
     }
 
+    public Date getSendTime() {
+        return sendTime;
+    }
 
+    public void setSendTime(Date sendTime) {
+        this.sendTime = sendTime;
+    }
+
+    public Date getReceiveTime() {
+        return receiveTime;
+    }
+
+    public void setReceiveTime(Date receiveTime) {
+        this.receiveTime = receiveTime;
+    }
+
+    public Date getResponseTime() {
+        return responseTime;
+    }
+
+    public void setResponseTime(Date responseTime) {
+        this.responseTime = responseTime;
+    }
+
+    public Date getResponseReceiveTime() {
+        return responseReceiveTime;
+    }
+
+    public void setResponseReceiveTime(Date responseReceiveTime) {
+        this.responseReceiveTime = responseReceiveTime;
+    }
+
+    public Double getNormTime() {
+        return normTime;
+    }
+
+    public void setNormTime(Double normTime) {
+        this.normTime = normTime;
+    }
+
+    public Double getElasticTime() {
+        return elasticTime;
+    }
+
+    public void setElasticTime(Double elasticTime) {
+        this.elasticTime = elasticTime;
+    }
+
+    public Double getRescoreTime() {
+        return rescoreTime;
+    }
+
+    public void setRescoreTime(Double rescoreTime) {
+        this.rescoreTime = rescoreTime;
+    }
+
+    public Double getRedisTime() {
+        return redisTime;
+    }
+
+    public void setRedisTime(Double redisTime) {
+        this.redisTime = redisTime;
+    }
+
+    public Double getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Double duration) {
+        this.duration = duration;
+    }
 }

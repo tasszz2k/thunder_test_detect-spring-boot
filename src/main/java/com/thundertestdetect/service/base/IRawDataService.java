@@ -4,5 +4,5 @@ import com.thundertestdetect.dto.RawDataDTO;
 
 public interface IRawDataService {
     String getRaw(RawDataDTO rawData);
-    String getRequest(RawDataDTO rawData);
+    String getRequest(RawDataDTO rawData, String requestId);
 }
