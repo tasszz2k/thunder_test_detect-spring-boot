@@ -9,8 +9,8 @@ public class ThunderTestResultConverter {
     public ThunderTestResultEntity toEntity(ThunderTestResultDTO dto) {
         ThunderTestResultEntity entity = new ThunderTestResultEntity();
         entity.setRequestId(dto.getRequest_id());
-        entity.setTotalDuration(dto.getTime());
-        entity.setCode(dto.getCode());
+        entity.setTotalDuration(dto.getTotal_duration());
+        entity.setCode(dto.getStatus_code());
         entity.setResponse(dto.getResponse());
         entity.setRaw(dto.getRaw());
         entity.setRequest(dto.getRequest());
@@ -30,8 +30,8 @@ public class ThunderTestResultConverter {
     public ThunderTestResultDTO toDTO(ThunderTestResultEntity entity) {
         ThunderTestResultDTO dto = new ThunderTestResultDTO();
         dto.setRequest_id(entity.getRequestId());
-        dto.setTime(entity.getTotalDuration());
-        dto.setCode(entity.getCode());
+        dto.setTotal_duration(entity.getTotalDuration());
+        dto.setStatus_code(entity.getCode());
         dto.setResponse(entity.getResponse());
         dto.setRaw(entity.getRaw());
         dto.setRequest(entity.getRequest());
